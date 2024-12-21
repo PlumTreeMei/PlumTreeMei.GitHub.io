@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2024-12-21T06:26:59.222Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>梅干菜</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>流浪同人女自建指南（1）：论坛系统选择</title>
+    <link href="http://example.com/2024/12/17/%E6%B5%81%E6%B5%AA%E5%90%8C%E4%BA%BA%E5%A5%B3%E8%87%AA%E5%BB%BA%E6%8C%87%E5%8D%97%EF%BC%881%EF%BC%89%EF%BC%9A%E8%AE%BA%E5%9D%9B%E7%B3%BB%E7%BB%9F%E9%80%89%E6%8B%A9/"/>
+    <id>http://example.com/2024/12/17/%E6%B5%81%E6%B5%AA%E5%90%8C%E4%BA%BA%E5%A5%B3%E8%87%AA%E5%BB%BA%E6%8C%87%E5%8D%97%EF%BC%881%EF%BC%89%EF%BC%9A%E8%AE%BA%E5%9D%9B%E7%B3%BB%E7%BB%9F%E9%80%89%E6%8B%A9/</id>
+    <published>2024-12-18T04:27:24.000Z</published>
+    <updated>2024-12-21T06:26:59.222Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>稍微整理了一下市面上常见的几种论坛系统软件。本人非专业程序员，因此会站在普通用户（即不需要什么代码知识预算也不高的前提下）分析他们的利弊。</p><h1 id="1-Discuz！"><a href="#1-Discuz！" class="headerlink" title="1.Discuz！"></a>1.Discuz！</h1><p>Discuz！是目前国内使用最多、接受度最高、支持也最多的系统。大家所熟悉的比如随缘居之类的论坛都使用了 discuz。如今，想要开发一个基于 discuz! 的论坛非常方便，你可以在官网上下载它的源代码，也可以花点钱找专业人士帮你量身定制。然而，discuz! 并非传统意义上的开源软件，社区生态并不是很好，小白容易被坑。它目前的版权全部属于腾讯，因此在使用的时候也需要遵循由腾讯拟定的协议。目前市面上最新的免费版本 为 dsicuz！ X3.5。</p><table><thead><tr><th><strong>指标</strong></th><th><strong>评价与说明</strong></th></tr></thead><tbody><tr><td><strong>技术框架</strong></td><td>PHP + MySQL</td></tr><tr><td><strong>插件种类</strong></td><td>非常多，但大部分需收费且质量良莠不齐</td></tr><tr><td><strong>功能性</strong></td><td>内置门户与积分系统等</td></tr><tr><td><strong>安全性</strong></td><td>官方停止更新，依赖社区修复漏洞与发布非官方更新版本，容易被攻击</td></tr><tr><td><strong>迁移能力</strong></td><td>插件兼容性差，迁移难度较高</td></tr><tr><td><strong>维护难度</strong></td><td>技术栈比较过时，缺少文档和官方维护。但国内相关从业者多，有钱可以兜底。</td></tr><tr><td><strong>移动端支持</strong></td><td>需插件与模板适配，不支持 PWA，需自行开发 App</td></tr><tr><td><strong>用户体验</strong></td><td>比较陈旧、但国内用户相对比较习惯</td></tr><tr><td><strong>推荐最低硬件要求</strong></td><td>1 核 CPU 512MB RAM 10GB 存储</td></tr></tbody></table><h1 id="2-Discourse"><a href="#2-Discourse" class="headerlink" title="2.Discourse"></a>2.Discourse</h1><p>Discourse 是一个对服务器要求较高的开源论坛系统，适合规模大的社区。它的功能强大、免费插件多、界面也非常现代化、在外网国外有非常活跃的社区环境和良好的生态。但是国内目前使用 discourse 的人并不多，因此想要使用 discourse 论坛只能自行学习搭建或者使用官方的托管服务。然而，官方的托管服务月费要起码 100 刀以上还有诸多限制，对于同人论坛来说不是什么好的选择。至于自建论坛的话，则需要比较多的计算机相关知识和较高的英语水平，二次开发难度较大。</p><table><thead><tr><th><strong>指标</strong></th><th><strong>评价与说明</strong></th></tr></thead><tbody><tr><td><strong>技术框架</strong></td><td>Ruby on Rails + Ember.js + PostgreSQL</td></tr><tr><td><strong>插件种类</strong></td><td>有非常多免费插件和模板</td></tr><tr><td><strong>功能性</strong></td><td>积分系统比较简陋，但有徽章系统、信任等级机制和内置聊天群组</td></tr><tr><td><strong>安全性</strong></td><td>有自动备份、SSL 证书自动更新、官方持续维护、有比较稳定的自动更新机制</td></tr><tr><td><strong>迁移能力</strong></td><td>支持多个平台的迁移，工具完善</td></tr><tr><td><strong>维护难度</strong></td><td>国内讨论少且涉及的技术栈在国内比较冷门。文档丰富但杂，需较高学习能力</td></tr><tr><td><strong>移动端支持</strong></td><td>响应式设计，支持 PWA</td></tr><tr><td><strong>用户体验</strong></td><td>设计现代化，国内用户需适应使用方式</td></tr><tr><td><strong>推荐最低硬件要求</strong></td><td>2 核 CPU 4GB RAM 20GB 存储</td></tr></tbody></table><h1 id="3-NodeBB"><a href="#3-NodeBB" class="headerlink" title="3.NodeBB"></a>3.NodeBB</h1><p>NodeBB 是基于 Node.js 构建的一个开源论坛软件。它同样拥有丰富的免费插件和现代化的界面，性能也不错。不过相对于 discourse 来说它的社区规模并没有那么大，官方提供的托管服务也特别昂贵。官方维护还算比较积极，但是对中文内容的支持似乎并不是很好。如果本身对 NodeBB 的技术栈比较熟悉，可以尝试看看。</p><table><thead><tr><th><strong>指标</strong></th><th><strong>评价与说明</strong></th></tr></thead><tbody><tr><td><strong>技术框架</strong></td><td>Node.js + Express.js+ MongoDB</td></tr><tr><td><strong>插件种类</strong></td><td>有很多免费插件和模板</td></tr><tr><td><strong>功能性</strong></td><td>有内置的实时聊天功能</td></tr><tr><td><strong>安全性</strong></td><td>官方持续维护</td></tr><tr><td><strong>迁移能力</strong></td><td>有社区插件支持</td></tr><tr><td><strong>维护难度</strong></td><td>二次开发门槛比 Discourse 低、技术栈相对热门些</td></tr><tr><td><strong>移动端支持</strong></td><td>响应式设计，支持 PWA</td></tr><tr><td><strong>用户体验</strong></td><td>设计现代化，国内用户需适应使用方式</td></tr><tr><td><strong>推荐最低硬件要求</strong></td><td>2 核 CPU 2GB RAM 20GB 存储</td></tr></tbody></table><h1 id="4-Flarum"><a href="#4-Flarum" class="headerlink" title="4.Flarum"></a>4.Flarum</h1><p>Flarum 是一款轻量级的开源论坛软件，对服务器的要求比较低。它的界面非常现代化和简洁，具有高效的性能和灵活的插件支持。功能虽然不多但是胜在非常精简，使用起来容易上手。特别适合要求不高的小型社区。</p><table><thead><tr><th><strong>指标</strong></th><th><strong>评价与说明</strong></th></tr></thead><tbody><tr><td><strong>技术框架</strong></td><td>PHP + Laravel + MySQL</td></tr><tr><td><strong>插件种类</strong></td><td>插件灵活但生态仍在成长中</td></tr><tr><td><strong>功能性</strong></td><td>功能比较精简</td></tr><tr><td><strong>安全性</strong></td><td>官方持续维护</td></tr><tr><td><strong>迁移能力</strong></td><td>比较有限</td></tr><tr><td><strong>维护难度</strong></td><td>维护简单，适合 PHP 开发者</td></tr><tr><td><strong>移动端支持</strong></td><td>响应式设计，但没有 PWA</td></tr><tr><td><strong>用户体验</strong></td><td>设计精简，上手容易</td></tr><tr><td><strong>推荐最低硬件要求</strong></td><td>1 核 CPU 1GB RAM 10GB 存储</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;稍微整理了一下市面上常见的几种论坛系统软件。本人非专业程序员，因此会站在普通用户（即不需要什么代码知识预算也不高的前提下）分析他们的利弊。&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="论坛" scheme="http://example.com/tags/%E8%AE%BA%E5%9D%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2024/12/17/hello-world/"/>
+    <id>http://example.com/2024/12/17/hello-world/</id>
+    <published>2024-12-18T02:06:00.845Z</published>
+    <updated>2024-12-18T02:06:00.845Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
