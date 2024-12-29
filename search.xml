@@ -21,7 +21,7 @@
   <entry>
     <title>流浪同人女自建指南（1）：论坛系统选择</title>
     <url>/2024/12/17/%E6%B5%81%E6%B5%AA%E5%90%8C%E4%BA%BA%E5%A5%B3%E8%87%AA%E5%BB%BA%E6%8C%87%E5%8D%97%EF%BC%881%EF%BC%89%EF%BC%9A%E8%AE%BA%E5%9D%9B%E7%B3%BB%E7%BB%9F%E9%80%89%E6%8B%A9/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>稍微整理了一下市面上常见的几种论坛系统软件。本人非专业程序员，因此会站在普通用户（即不需要什么代码知识预算也不高的前提下）分析他们的利弊。</p>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>稍微整理了一下市面上常见的几种论坛系统软件。首先要说明，没有哪一种论坛软件是完美的，他们都有各自的优点和缺点。所以在挑选论坛系统之前，应当做的事情是明确自己的需求和预算，然后找几个对标的论坛注册和体验一下。接着可以去这几个论坛官方的社区里看看指南和文档，了解一下详情。本文将会介绍和分析四款在市面上最为流行的论坛软件系统。</p>
 <h1 id="1-Discuz！"><a href="#1-Discuz！" class="headerlink" title="1.Discuz！"></a>1.Discuz！</h1><p>Discuz！是目前国内使用最多、接受度最高、支持也最多的系统。大家所熟悉的比如随缘居之类的论坛都使用了 discuz。如今，想要开发一个基于 discuz! 的论坛非常方便，你可以在官网上下载它的源代码，也可以花点钱找专业人士帮你量身定制。然而，discuz! 并非传统意义上的开源软件，社区生态并不是很好，小白容易被坑。它目前的版权全部属于腾讯，因此在使用的时候也需要遵循由腾讯拟定的协议。目前市面上最新的免费版本 为 dsicuz！ X3.5。</p>
 <table>
 <thead>
@@ -52,7 +52,7 @@
 </tr>
 <tr>
 <td><strong>维护难度</strong></td>
-<td>技术栈比较过时，缺少文档和官方维护。但国内相关从业者多，有钱可以兜底。</td>
+<td>整个系统比较过时，缺少文档和官方维护。但国内相关从业者多，有钱可以兜底。</td>
 </tr>
 <tr>
 <td><strong>移动端支持</strong></td>
@@ -60,7 +60,7 @@
 </tr>
 <tr>
 <td><strong>用户体验</strong></td>
-<td>比较陈旧、但国内用户相对比较习惯</td>
+<td>比较陈旧、但国内用户相对比较习惯，接受度高</td>
 </tr>
 <tr>
 <td><strong>推荐最低硬件要求</strong></td>
@@ -204,7 +204,83 @@
 </tbody></table>
 ]]></content>
       <tags>
-        <tag>论坛</tag>
+        <tag>同人论坛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MERN项目部署指南</title>
+    <url>/2024/12/27/MERN%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<h2 id="本指南使用环境："><a href="#本指南使用环境：" class="headerlink" title="本指南使用环境："></a>本指南使用环境：</h2><p>Ubuntu 22.04</p>
+<p>Mongodb 8.0</p>
+<h1 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h1><h2 id="1-Ubuntu-服务器"><a href="#1-Ubuntu-服务器" class="headerlink" title="1. Ubuntu 服务器"></a>1. Ubuntu 服务器</h2><p>安装 Node.js 和 npm 连接到您的服务器，运行以下命令安装 Node.js 和 npm。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install nodejs npm</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-安装-mongodb"><a href="#2-安装-mongodb" class="headerlink" title="2. 安装 mongodb"></a>2. 安装 mongodb</h2><p>参考网站 <a href="https://www.mongodb.com/zh-cn/docs/manual/tutorial/install-mongodb-on-ubuntu/">https://www.mongodb.com/zh-cn/docs/manual/tutorial/install-mongodb-on-ubuntu/</a></p>
+<p>安装 MongoDB Community Edition<br>按照以下步骤使用 apt 软件包管理器安装 MongoDB Community Edition。</p>
+<h3 id="1-导入公钥"><a href="#1-导入公钥" class="headerlink" title="1. 导入公钥"></a>1. 导入公钥</h3><p>从终端安装 gnupg 和 curl（如果尚未安装）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install gnupg curl</span><br></pre></td></tr></table></figure>
+
+<p>要导入 MongoDB 公共 GPG 密钥，请运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \</span><br><span class="line"><span class="built_in">sudo</span> gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \</span><br><span class="line">--dearmor</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-创建列表文件"><a href="#2-创建列表文件" class="headerlink" title="2. 创建列表文件"></a>2. 创建列表文件</h3><p>为您的 Ubuntu 版本创建列表文件 &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;mongodb-org-8.0.list。</p>
+<p>为 Ubuntu 22.04 (Jammy) 创建列表文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/8.0 multiverse&quot;</span> | <span class="built_in">sudo</span> <span class="built_in">tee</span> /etc/apt/sources.list.d/mongodb-org-8.0.list</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-重新加载包数据库"><a href="#3-重新加载包数据库" class="headerlink" title="3. 重新加载包数据库"></a>3. 重新加载包数据库</h3><p>发出以下命令以重新加载本地软件包数据库：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get update</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-安装-MongoDB-Community-Server"><a href="#4-安装-MongoDB-Community-Server" class="headerlink" title="4. 安装 MongoDB Community Server"></a>4. 安装 MongoDB Community Server</h3><p>您可以安装最新稳定版本的 MongoDB 或指定版本的 MongoDB。<br>要安装最新的稳定版本，请执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install -y mongodb-org</span><br></pre></td></tr></table></figure>
+
+<p>在 Ubuntu 中安装 MongoDB 时，如需对过程中遇到的错误进行故障排查，请参阅故障排查指南。</p>
+<p>启动 mogodb 服务</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo systemctl start mongod</span><br></pre></td></tr></table></figure>
+
+<p>检查服务运行状态</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo systemctl status mongod</span><br></pre></td></tr></table></figure>
+
+<p>配置文件通常在配置文件通常位于 &#x2F;etc&#x2F;mongod.conf</p>
+<h2 id="3-安装-Nginx"><a href="#3-安装-Nginx" class="headerlink" title="3.安装 Nginx"></a>3.安装 Nginx</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install nginx</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-安装-PM2"><a href="#4-安装-PM2" class="headerlink" title="4.安装 PM2"></a>4.安装 PM2</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install pm2 -g</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-连接到-github-目录"><a href="#3-连接到-github-目录" class="headerlink" title="3.连接到 github 目录"></a>3.连接到 github 目录</h2><p>使用 SSH 进行身份验证。这是推荐的方式，特别适用于服务器环境。</p>
+<p>生成 SSH 密钥 在服务器上生成一个新的 SSH 密钥对：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>按提示操作即可，通常密钥会保存在 ~&#x2F;.ssh&#x2F;id_ed25519 中。</p>
+<p>添加 SSH 密钥到 GitHub</p>
+<p>运行以下命令查看生成的公钥：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_ed25519.pub</span><br></pre></td></tr></table></figure>
+
+<p>复制显示的公钥内容。<br>登录 GitHub，进入「Settings」-&gt;「SSH and GPG keys」-&gt;「New SSH Key」，粘贴公钥并保存。<br>随后下载自己的项目代码</p>
+<h2 id="4-配置-Nginx、PM2-和-SSL"><a href="#4-配置-Nginx、PM2-和-SSL" class="headerlink" title="4.配置 Nginx、PM2 和 SSL"></a>4.配置 Nginx、PM2 和 SSL</h2><p>构筑前端静态</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+<p>创建目录</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /var/www/html/项目名字</span><br></pre></td></tr></table></figure>
+
+<p>将配置链接到 site-enabled</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo ln -s /etc/nginx/sites-available/list /etc/nginx/sites-enabled/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>将 build 出来的文件复制过去</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp -r dist/* /var/www/html/项目名字/</span><br></pre></td></tr></table></figure>
+
+<p>使用免费 SSL 证书 Let’s encrypt</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install certbot python3-certbot-nginx</span><br><span class="line">sudo certbot --nginx -d 域名 -d www.域名</span><br></pre></td></tr></table></figure>
+
+<p>在&#x2F;etc&#x2F;nginx&#x2F;sites-available&#x2F;下修改 default 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    server_name #你的域名;</span><br><span class="line"></span><br><span class="line">    root /var/www/html/项目名字;</span><br><span class="line"></span><br><span class="line">    index index.html index.htm index.nginx-debian.html;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        try_files $uri /index.html;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location /api/ &#123;</span><br><span class="line">        proxy_pass http://localhost:5000;  # 指向你的后端服务地址</span><br><span class="line">        proxy_http_version 1.1;</span><br><span class="line">        proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">        proxy_set_header Connection &#x27;upgrade&#x27;;</span><br><span class="line">        proxy_set_header Host $host;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    listen 443 ssl; # managed by Certbot</span><br><span class="line">    ssl_certificate /etc/letsencrypt/live/域名/fullchain.pem; # managed by Certbot</span><br><span class="line">    ssl_certificate_key /etc/letsencrypt/live/域名/privkey.pem; # managed by Certbot</span><br><span class="line">    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot</span><br><span class="line">    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    if ($host = 域名) &#123;</span><br><span class="line">        return 301 https://$host$request_uri;</span><br><span class="line">    &#125; # managed by Certbot</span><br><span class="line"></span><br><span class="line">    if ($host = 域名) &#123;</span><br><span class="line">        return 301 https://$host$request_uri;</span><br><span class="line">    &#125; # managed by Certbot</span><br><span class="line"></span><br><span class="line">    listen 80;</span><br><span class="line">    server_name 域名；</span><br><span class="line"></span><br><span class="line">    server_name _;</span><br><span class="line">    return 404; # managed by Certbot</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>检验并重启 nginx 服务</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo nginx -t</span><br><span class="line">sudo systemctl restart nginx</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>进入 server 文件夹以后启动后端项目</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pm2 start index.js --name &quot;backend&quot; //你的项目启动名称</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>自用</tag>
       </tags>
   </entry>
 </search>
